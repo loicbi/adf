@@ -4,20 +4,20 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Nom de fabrique de données",
+			"metadata": "Data Factory name",
 			"defaultValue": "adflearningyoutube"
 		},
 		"lnkblobsource_connectionString": {
 			"type": "secureString",
-			"metadata": "Chaîne sécurisée pour « connectionString » de « lnkblobsource »"
+			"metadata": "Secure string for 'connectionString' of 'lnkblobsource'"
 		},
 		"containerUri": {
 			"type": "string",
-			"metadata": "URI pour le compte de stockage contenant des modèles ARM liés"
+			"metadata": "URI to storage account containing linked ARM templates"
 		},
 		"containerSasToken": {
 			"type": "string",
-			"metadata": "Jeton SAS pour le compte de stockage contenant des modèles ARM liés"
+			"metadata": "Sas token to storage account containing linked ARM templates"
 		}
 	},
 	"variables": {
