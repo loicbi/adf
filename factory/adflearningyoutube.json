@@ -1,0 +1,9 @@
+{
+	"name": "adflearningyoutube",
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "74708597-8202-457f-860f-1aa856ac885e",
+		"tenantId": "094b167e-8d98-4a87-b9b6-7cad28b099d9"
+	}
+}
