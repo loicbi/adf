@@ -1,0 +1,25 @@
+{
+	"name": "ds_input_file_xlsx",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnk_blobtbsource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "MOCK_DATA.csv",
+				"folderPath": "ca/THIRD_PARTY_DATA/QUALTRICS/test/source",
+				"container": "dev-dl"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "techbrothersite-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "95d5c51c-cb47-47ce-9b1a-568b0c3c492e",
+		"tenantId": "da67ef1b-ca59-4db2-9a8c-aa8d94617a16"
+	}
+}
