@@ -1,5 +1,5 @@
 {
-	"name": "pl_copyFiles_RemoveFiles",
+	"name": "8_pl_copyFiles_RemoveFiles",
 	"properties": {
 		"activities": [
 			{
@@ -26,18 +26,43 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "dsfileSourceToCopy",
 						"type": "DatasetReference"
 					}
+				],
+				"outputs": [
+					{
+						"referenceName": "dsRemoveFileDestination",
+						"type": "DatasetReference"
+					}
 				]
 			}
 		],
 		"folder": {
-			"name": "Copy Files From One Folder to Another and Delete in Source Folder"
+			"name": "8_Copy Files From One Folder to Another and Delete in Source Folder"
 		},
 		"annotations": []
 	}

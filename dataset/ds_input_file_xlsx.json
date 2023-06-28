@@ -5,6 +5,9 @@
 			"referenceName": "lnk_blobtbsource",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "4"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

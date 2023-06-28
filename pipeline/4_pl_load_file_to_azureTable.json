@@ -1,5 +1,5 @@
 {
-	"name": "1_pl_load_file_to_azureTable",
+	"name": "4_pl_load_file_to_azureTable",
 	"properties": {
 		"activities": [
 			{
@@ -77,6 +77,9 @@
 				}
 			}
 		],
+		"folder": {
+			"name": "4_LoadFile_to_azure"
+		},
 		"annotations": [],
 		"lastPublishTime": "2023-06-27T04:56:29Z"
 	},

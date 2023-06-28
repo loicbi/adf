@@ -1,12 +1,12 @@
 {
-	"name": "ds_output_file_xlsx",
+	"name": "dsRemoveFileDestination",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "lnk_blobtbsource",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "4"
+			"name": "8"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
@@ -22,6 +22,5 @@
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
