@@ -20,6 +20,7 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
+							"wildcardFileName": "MOCK_*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -34,7 +35,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false,
@@ -49,16 +50,55 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "dsfileSourceToCopy",
+						"referenceName": "8_ds_fileSourceToCopyAndRemove",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "dsRemoveFileDestination",
+						"referenceName": "8_ds_FileDestination",
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Delete file beginning by  MOCK_",
+				"type": "Delete",
+				"dependsOn": [
+					{
+						"activity": "Copy data from source to destination",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "8_ds_fileSourceToCopyAndRemove",
+						"type": "DatasetReference"
+					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "lnk_blobtbsource",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"enableLogging": true,
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"wildcardFileName": "MOCK_*.csv",
+						"enablePartitionDiscovery": false
+					}
+				}
 			}
 		],
 		"folder": {

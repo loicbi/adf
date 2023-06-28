@@ -1,5 +1,5 @@
 {
-	"name": "dsRemoveFileDestination",
+	"name": "8_ds_FileDestination",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "lnk_blobtbsource",

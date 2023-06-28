@@ -1,5 +1,5 @@
 {
-	"name": "dsfileSourceToCopy",
+	"name": "8_ds_fileSourceToCopyAndRemove",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "lnk_blobtbsource",
