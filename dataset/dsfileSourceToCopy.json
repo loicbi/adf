@@ -1,0 +1,23 @@
+{
+	"name": "dsfileSourceToCopy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnk_blobtbsource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "ca/THIRD_PARTY_DATA/QUALTRICS/test/source",
+				"container": "dev-dl"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
